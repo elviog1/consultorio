@@ -1,7 +1,24 @@
-import React from "react";
-export default function NewPatient() {
+import Link from 'next/link'
+import React from 'react'
+
+export default function page({params}) {
+  const {id} = params
   return (
-    <form className=" bg-sky-300 shadow-xl bg-opacity-70 m-auto p-4 rounded-lg mt-2">
+    <main className='min-h-screen flex justify-center items-center'>
+      <div className=' '>
+      <form className=" bg-sky-300 shadow-xl max-w-xl bg-opacity-70 m-auto p-4 rounded-lg mt-2">
+      {/* <div className="flex flex-col">
+        <label htmlFor="nombre" className="text-white font-bold">
+          ID
+        </label>
+        <input
+          id="nombre"
+          placeholder="Ingrese el nombre del paciente"
+          type="email"
+          className="px-4 py-1 my-2 rounded-lg"
+        />
+      </div> */}
+      <div className='flex gap-5'>
       <div className="flex flex-col">
         <label htmlFor="nombre" className="text-white font-bold">
           Nombre
@@ -24,7 +41,8 @@ export default function NewPatient() {
           className="px-4 py-1 my-2 rounded-lg"
         />
       </div>
-      <div className="flex flex-col">
+      </div>
+      {/* <div className="flex flex-col">
         <label htmlFor="email" className="text-white font-bold">
           Email
         </label>
@@ -34,7 +52,7 @@ export default function NewPatient() {
           type="email"
           className="px-4 py-1 my-2 rounded-lg"
         />
-      </div>
+      </div> */}
       <div className="flex flex-col">
         <label htmlFor="date" className="text-white font-bold">
           Nacimiento
@@ -56,8 +74,9 @@ export default function NewPatient() {
           className="px-4 py-1 my-2 rounded-lg"
         />
       </div>
-      <div className="flex justify-between mt-2">
-        {/* <button className='bg-white px-4 rounded-md py-1'>Crear Usuario</button> */}
+      <textarea className='w-full resize-none' rows={10}></textarea>
+      <div className="flex  gap-2 justify-between mt-2">
+        <Link className="bg-white text-center px-4 rounded-md py-1 w-full" href='/patients'>Salir</Link>
         <button
           className="bg-white text-center px-4 rounded-md py-1 w-full"
         >
@@ -65,5 +84,7 @@ export default function NewPatient() {
         </button>
       </div>
     </form>
-  );
+      </div>
+    </main>
+  )
 }

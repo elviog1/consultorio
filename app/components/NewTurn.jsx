@@ -1,5 +1,5 @@
 import React from "react";
-export default function NewPatient() {
+export default function NewTurn() {
   return (
     <form className=" bg-sky-300 shadow-xl bg-opacity-70 m-auto p-4 rounded-lg mt-2">
       <div className="flex flex-col">
@@ -25,26 +25,31 @@ export default function NewPatient() {
         />
       </div>
       <div className="flex flex-col">
-        <label htmlFor="email" className="text-white font-bold">
-          Email
+        <label htmlFor="time" className="text-white font-bold">
+          Hora
         </label>
+        <select>
+            <option>10:00</option>
+            <option>10:30</option>
+            <option>11:00</option>
+            <option>11:30</option>
+            <option>12:00</option>
+            <option>12:30</option>
+            <option>13:00</option>
+            <option>13:30</option>
+            <option>14:00</option>
+            <option>14:30</option>
+            <option>15:00</option>
+            <option>15:30</option>
+        </select>
         <input
-          id="email"
+          id="time"
           placeholder="Ingrese el email del paciente"
-          type="email"
+          type="number"
           className="px-4 py-1 my-2 rounded-lg"
         />
       </div>
-      <div className="flex flex-col">
-        <label htmlFor="date" className="text-white font-bold">
-          Nacimiento
-        </label>
-        <input
-          id="date"
-          type="date"
-          className="px-4 py-1 my-2 rounded-lg"
-        />
-      </div>
+      
       <div className="flex flex-col">
         <label htmlFor="telefono" className="text-white font-bold">
           Telefono
@@ -64,6 +69,7 @@ export default function NewPatient() {
           Guardar
         </button>
       </div>
+      
     </form>
   );
 }

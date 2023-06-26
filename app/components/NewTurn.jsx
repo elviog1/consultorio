@@ -9,7 +9,7 @@ export default function NewTurn() {
         <input
           id="nombre"
           placeholder="Ingrese el nombre del paciente"
-          type="email"
+          type="text"
           className="px-4 py-1 my-2 rounded-lg"
         />
       </div>
@@ -20,7 +20,7 @@ export default function NewTurn() {
         <input
           id="apellido"
           placeholder="Ingrese el apellido del paciente"
-          type="password"
+          type="text"
           className="px-4 py-1 my-2 rounded-lg"
         />
       </div>
@@ -42,12 +42,7 @@ export default function NewTurn() {
             <option>15:00</option>
             <option>15:30</option>
         </select>
-        <input
-          id="time"
-          placeholder="Ingrese el email del paciente"
-          type="number"
-          className="px-4 py-1 my-2 rounded-lg"
-        />
+        
       </div>
       
       <div className="flex flex-col">

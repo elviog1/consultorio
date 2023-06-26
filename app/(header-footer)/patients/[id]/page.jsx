@@ -3,6 +3,7 @@ import React from 'react'
 
 export default function page({params}) {
   const {id} = params
+  // console.log(id)
   return (
     <main className='min-h-screen flex justify-center items-center'>
       <div className=' '>
@@ -37,7 +38,7 @@ export default function page({params}) {
         <input
           id="apellido"
           placeholder="Ingrese el apellido del paciente"
-          type="password"
+          type="text"
           className="px-4 py-1 my-2 rounded-lg"
         />
       </div>
@@ -74,7 +75,10 @@ export default function page({params}) {
           className="px-4 py-1 my-2 rounded-lg"
         />
       </div>
-      <textarea className='w-full resize-none' rows={10}></textarea>
+      <label htmlFor="historial" className="text-white font-bold">
+          Historial
+        </label>
+      <textarea className='w-full resize-none' rows={10}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, ab eum quia laborum ea cupiditate earum dolore similique debitis, porro id incidunt quasi voluptatum! Praesentium minima laboriosam sed quibusdam eius!</textarea>
       <div className="flex  gap-2 justify-between mt-2">
         <Link className="bg-white text-center px-4 rounded-md py-1 w-full" href='/patients'>Salir</Link>
         <button
